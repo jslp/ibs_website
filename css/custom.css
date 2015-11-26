@@ -25,10 +25,10 @@ h5 {
 }
 p {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 13px;
+	font-size: 14px;
 }
 a {
-	color: #5b777f;
+	color: #6e6e6e;
 	transition: all 0.5s;
 }
 a:hover, a:focus {
@@ -73,6 +73,7 @@ ul, ol {
 .section-title h2 {
 	font-weight: 400;
 	margin-bottom: 26px;
+    text-transform: uppercase;
 }
 hr {
 	height: 3px;
@@ -103,7 +104,7 @@ hr {
 }
 
 #menu a.navbar-brand i.fa {
-	color: #f3ca27;
+	color: #ff9b09;
 }
 #menu.navbar-default .navbar-nav > li > a {
 	text-transform: uppercase;
@@ -124,21 +125,21 @@ hr {
 	padding: 0 !important;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-	color: #f3ca27 !important;
+	color: #FF9b09; !important;
 	background-color: transparent;
 }
 .navbar-toggle {
 	border-radius: 0;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-	background-color: #f3ca27;
-	border-color: #f3ca27;
+	background-color: #FF9b09;
+	border-color: #FF9b09;
 }
 .navbar-default .navbar-toggle:hover>.icon-bar {
 	background-color: #FFF;
 }
 
-/* Home Style */
+/* Header Style */
 header {
 	background: url(../img/header.jpg) no-repeat bottom center;
 	background-size: cover;
@@ -180,4 +181,35 @@ header p {
 }
 .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active {
 	background-color: #FF5909;
+}
+
+/* About ME Style */
+
+#aboutme-section{
+    padding-top: 125px;
+    padding-bottom: 125px;
+}
+
+.img-thumbnail {
+    max-height: 200px;
+}
+
+/* Studium Style */
+
+#studium-section{
+    padding-top: 125px;
+    padding-bottom: 125px;
+    background-color: rgba(20, 44, 68, 0.85);
+    color: #fff;
+}
+
+.logo {
+    padding: 20px;
+}
+
+/* Codecademy Style */
+
+#codecademy-section {
+    padding-top: 125px;
+    padding-bottom: 125px;
 }

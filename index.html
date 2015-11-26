@@ -44,14 +44,15 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand" href="index.html"><i class="fa fa-flag-checkered fa-flip-horizontal"></i> JS<strong></strong></a> </div>
+      <a class="navbar-brand" href="index.html"><i class="fa fa-flag-checkered fa-flip-horizontal"></i> JS<strong></strong></a>
+      </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#home" class="page-scroll">Home</a></li>
-        <li><a href="#services-section" class="page-scroll">About Me</a></li>
-        <li><a href="#works-section" class="page-scroll">Studium</a></li>
+        <li><a href="#aboutme-section" class="page-scroll">About Me</a></li>
+        <li><a href="#studium-section" class="page-scroll">Studium</a></li>
         <li><a href="#about-section" class="page-scroll">Codecademy</a></li>
         <li><a href="#team-section" class="page-scroll">Wikipedia-Suchformular</a></li>
       </ul>
@@ -61,13 +62,127 @@
   <!-- /.container-fluid -->
 </nav>
 
+
+
     <!-- Header -->
-<header class="text-right" name="home">
+<header id="home" class="text-right">
   <div class="intro-text">
     <h1 class="wow fadeInDown">Hallo,<br> ich bin <strong><span class="color">Jonas</span></strong></h1>
     <p class="wow fadeInDown">ein Informatik Student <br> an der THM.</p>
-    <a href="#works-section" class="btn btn-default btn-lg page-scroll wow fadeInUp" data-wow-delay="200ms">Mein Studium</a> </div>
+    <a href="#studium-section" class="btn btn-default btn-lg page-scroll wow fadeInUp" data-wow-delay="200ms">Mein Studium</a> </div>
 </header>
+
+
+
+    <!-- About Me Section -->
+<div id="aboutme-section" class="text-center">
+  <div class="container">
+    <div class="section-title wow fadeInDown">
+      <h2>About me</h2>
+      <hr>
+      <div class="clearfix"></div>
+      <p> Ich habe diese Website als Projekt für ein Modul des 2.Semesters namens Internetbasierte Systeme erstellt.<br> Über mich, meine erworbenen Fähigkeiten und das restliche Studium würde ich euch gerne informieren.</p>
+    </div>
+    <div class="space"></div>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-2 wow fadeInUp" data-wow-delay="200ms">
+            <img src="img/me.jpg" alt="Portrait Jonas Schlapp" class="img-thumbnail">
+        </div>
+        <div class="col-md-4 wow fadeInUp" data-wow-delay="200ms">
+            <h3>Profil</h3>
+            <ul>
+                <li><strong><span class="color">Name:</span></strong> Jonas Schlapp</li>
+                <li><strong><span class="color">Alter:</span></strong> 25 Jahre</li>
+                <li><strong><span class="color">Beruf</span></strong> Student</li>
+            </ul>
+            <ul>
+                <li><strong><span class="color">Bisherige Laufbahn:</span></strong></li>
+                <li><strong><span class="color">2012 - 2014:</span></strong> Ausbildung zum Mediengestalter</li>
+                <li><strong><span class="color">ab 2015:</span></strong> Studium der Informatik </li>
+            </ul>
+        </div>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+        <!-- Studium Section -->
+<div id="studium-section" class="text-center">
+  <div class="container">
+    <div class="section-title wow fadeInDown">
+      <h2>Studium</h2>
+      <hr>
+      <div class="clearfix"></div>
+        <p> Hier gibt es alle Informationen zu meinem bisherigen Studium an der <a href="www.thm.de">Technischen Hochschule Mittelhessen</a> in Giessen.<br>Ich studiere jetzt seit einem Jahr das Fach Informatik an der THM. Mein angestrebter Abschluss ist der Bachelor of Science in Informatik,<br> welchen ich hoffentlich in 2 weiteren Jahren erlangen kann. Nachfoldend eine Übersicht über bisher abgeschlossene Module.</p>
+    </div>
+    <div class="space"></div>
+    <div class="row">
+        <div class="col-md-4 wow fadeInUp" data-wow-delay="200ms">
+            <ul>
+                <li><strong><span class="color">1. Semester</span></strong></li>
+            </ul>
+            <ul>
+                <li>Diskrete Mathematik</li>
+                <li>Grundlagen der Informatik</li>
+                <li>Naturwissenschaftliche Grundlagen</li>
+                <li>Rechnernetze und ihre Anwendungen</li>
+                <li>Objektorientiert Programmierung</li>
+            </ul>
+        </div>
+        <div class="col-md-4 wow fadeInUp" data-wow-delay="200ms">
+            <ul>
+            <li><strong><span class="color">2. Semester</span></strong></li>
+            </ul>
+            <ul>
+                <li>Lineare Algebra</li>
+                <li>Recht für Informatiker</li>
+                <li>DV-orientierte BWL</li>
+                <li>Internetbasierte Systeme</li>
+                <li>Programmierung interaktiver Systeme</li>
+                <li>Algorithmen und Datenstrukturen</li>
+            </ul>
+        </div>
+        <div class="col-md-4 wow fadeInUp" data-wow-delay="200ms">
+             <a href="http://www.thm.de">
+            <img src="img/THM_Logo_4c.png" alt="Logo Technische Hochschule Mittelhessen" class="img-thumbnail logo">
+            </a>
+        </div>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+ <!-- Codecademy Section -->
+    <div id="codecademy-section" class="text-center">
+        <div class="container">
+            <div class="section-title wow fadeInDown">
+                <h2>Codecademy</h2>
+                <hr>
+                <div class="clearfix"></div>
+                <p>Im Laufe des Kurses Internetbasierte Systeme haben wir immer wieder die Website <a href="www.https://www.codecademy.com">Codecademy</a> besucht um dort Online-Kurse zu absolvieren.</p>
+            </div>
+            <div class="space"></div>
+            <div class="row">
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="200ms">
+
+                </div>
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="200ms">
+
+                </div>
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="200ms">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
