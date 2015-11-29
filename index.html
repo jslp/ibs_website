@@ -51,10 +51,10 @@
     <div class="collapse navbar-collapse" id="my-navbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#home" class="page-scroll">Home</a></li>
-        <li><a href="#aboutme-section" class="page-scroll">About Me</a></li>
-        <li><a href="#studium-section" class="page-scroll">Studium</a></li>
-        <li><a href="#ibs-section" class="page-scroll">IBS</a></li>
-        <li><a href="wikisuche.html" class="page-scroll">Wikipedia-Suchformular</a></li>
+        <li><a href="#aboutme-section" class="smoothScroll">About Me</a></li>
+        <li><a href="#studium-section" class="smoothScroll">Studium</a></li>
+        <li><a href="#ibs-section" class="smoothScroll">IBS</a></li>
+        <li><a href="wikisuche.html" class="smoothScroll">Wikipedia-Suchformular</a></li>
       </ul>
     </div>
     <!-- /.navbar-collapse -->
@@ -69,7 +69,7 @@
   <div class="intro-text">
     <h1>Hallo,<br> ich bin <strong><span class="color">Jonas</span></strong></h1>
     <p>ein Informatik Student <br> an der THM.</p>
-    <a href="#studium-section" class="btn btn-default btn-lg page-scroll">Mein Studium</a> </div>
+    <a href="#studium-section" class="btn btn-default btn-lg smoothScroll">Mein Studium</a> </div>
 </header>
 
 
@@ -164,11 +164,19 @@
             </div>
             <div class="space"></div>
             <div class="row">
-                <div class="col-md-6 form-group">
+                <div class="col-md-4 form-group">
                     <a href="https://www.codecademy.com/Seteleh"><img src="img/codecademy.png" alt="Codecademy Logo" class="img-thumbnail logo"></a>
                 </div>
-                <div class="col-md-6 form-group">
+                <div class="col-md-4 form-group">
                      <a href="https://github.com/jslp"><img src="img/GitHub_Logo.png" alt="Github Logo" class="img-thumbnail logo"></a>
+                </div>
+                 <div class="col-md-4 form-group">
+                     <p>
+                     <a href="https://github.com/JohannesMaximilianBauer/MBWS2015/pull/1"> Pull Request 1</a>
+                     </p>
+                     <p>
+                     <a href="https://github.com/jslp/ibs_website/pull/1"> Pull Request 2</a>
+                     </p>
                 </div>
             </div>
 
@@ -193,7 +201,7 @@
                 </tr></table>
             </div>
             <div class="col-md-4 text-right form-group">
-                <a href="#home" class="page-scroll"><span class="glyphicon glyphicon-menu-up glyphicon-bigger"></span></a>
+                <a href="#home" class="smoothScroll"><span class="glyphicon glyphicon-menu-up glyphicon-bigger"></span></a>
             </div>
         </div>
     </div>
@@ -205,8 +213,9 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <!-- Additional Javascript -->
+    <script src="js/smoothscroll.js"></script>
 
 </body>
 
