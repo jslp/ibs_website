@@ -227,3 +227,8 @@ header p {
     background-color: rgba(20, 44, 68, 0.85);
     color: #fff;
 }
+
+#wiki-section{
+    padding-top: 125px;
+    padding-bottom: 125px;
+}
