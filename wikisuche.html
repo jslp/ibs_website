@@ -43,7 +43,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand smoothScroll" href="#home"><strong>JS</strong></a>
+      <a class="navbar-brand smoothScroll" href="index.html#home"><strong>JS</strong></a>
       </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -64,13 +64,14 @@
     <div id="wiki-section" class="text-center">
           <div class="container">
     <div class="section-title">
-      <h2>Wikipedia Suche</h2>
+      <h1>Wikipedia Suche</h1>
       <hr>
       <div class="clearfix"></div>
       <div>
             <form action="http://de.wikipedia.org/wiki/Spezial:Suche">
-            <label for="search" tabindex="1">
-                <input id="search" type="text" value="" title="Suchtext" name="search">
+            <label for="search" tabindex="0">
+                Suche
+                <input id="search" type="text" value="" title="Suchtext" name="search" autofocus>
             </label>
             <input type="submit" name="go" value="Artikel">
             <input type="submit" name="fulltext" value="Volltext">
