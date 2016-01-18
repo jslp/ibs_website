@@ -228,7 +228,16 @@ header p {
     color: #fff;
 }
 
+/* Wiki-Formular */
+
 #wiki-section{
+    padding-top: 125px;
+    padding-bottom: 125px;
+}
+
+/* Webapp Style*/
+
+#webapp-section{
     padding-top: 125px;
     padding-bottom: 125px;
 }
