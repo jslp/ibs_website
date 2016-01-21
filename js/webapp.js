@@ -1,11 +1,15 @@
-var xhr;
+var xmlhttp = new XMLHttpRequest();
+var url = "https://arsnova.eu/api/statistics";
 
-if (window.XMLHttpRequest) {
-    xhr = new XMLHttpRequest();
-    } else {
-    // code for IE6, IE5
-    xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+xmlhttp.onreadystatechange=function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        getdata(xmlhttp.responseText);
+    }
 }
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
 
-xhr.open("GET","https://arsnova.eu/api/statistics", false);
-
+function getdata(response) {
+    var data = JSON.parse(response);
+    document.getElementById("stat-text").innerHTML = response;
+}
