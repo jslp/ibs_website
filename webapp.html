@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Wikipedia-Suche</title>
+    <title>Arsnova-Statistik</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha512dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
@@ -51,7 +51,7 @@
         <li><a href="index.html#studium-section" class="smoothScroll">Studium</a></li>
         <li><a href="index.html#ibs-section" class="smoothScroll">IBS</a></li>
         <li><a href="wikisuche.html" class="smoothScroll">Wikipedia-Suchformular</a></li>
-        <li><a href="webapp.html" class="smoothScroll">Webapp</a></li>
+        <li><a href="webapp.html" class="smoothScroll">Arsnova-Statistik</a></li>
       </ul>
     </div>
     <!-- /.navbar-collapse -->
@@ -67,9 +67,13 @@
     </div>
     <div class="space"></div>
         <div class="row">
-        <div class="col-md-12 form-group">
-           <p id="stat-text"></p>
-        </div>
+            <div class="col-md-6 form-group">
+                <p id="stat-text"></p>
+                <canvas id="questionChart" width="400" height="400"></canvas>
+            </div>
+            <div class="col-md-6 form-group">
+
+            </div>
         </div>
     </div>
   </div>
@@ -107,6 +111,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <!-- Additional Javascript -->
     <script type="text/javascript" src="js/smoothscroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
     <script type="text/javascript" src="js/webapp.js"></script>
   </body>
 </html>
