@@ -55,10 +55,34 @@ function getdata(response) {
             label: "Zwischenfragen"
         }
     ]
-    // Get context with jQuery - using jQuery's .get() method.
-    var ctx = $("#questionChart").get(0).getContext("2d");
-    // This will get the first returned node in the jQuery collection.
-    var questionChart = new Chart(ctx).Doughnut(questionData, {segmentStrokeWidth: 2});
+
+
+    var sessionData = [
+         {
+            value: sessions,
+            color:"#FF9B09",
+            highlight: "#FF8909",
+            label: "Sitzungen gesamt"
+        },
+        {
+            value: openSessions,
+            color: "#125DA6",
+            highlight: "#125DDD",
+            label: "offene Sitzungen"
+        },
+        {
+            value: closedSessions,
+            color:"#FF5909",
+            highlight: "#FF5909",
+            label: "geschlossene Sitzungen"
+        }
+    ]
+
+    var first = $("#questionChart").get(0).getContext("2d");
+    var questionChart = new Chart(first).Doughnut(questionData, {segmentStrokeWidth: 2});
+
+    var second = $("#sessionChart").get(0).getContext("2d");
+    var sessionChart = new Chart(second).PolarArea(sessionData);
 }
 
 
