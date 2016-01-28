@@ -239,10 +239,12 @@ header p {
 
 #webapp-section{
     padding-top: 125px;
-    padding-bottom: 125px;
+    padding-bottom: 30px;
 }
 
 .stat-datafield{
     padding-top: 20px;
     padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
 }

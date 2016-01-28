@@ -1,19 +1,34 @@
-var xhr = new XMLHttpRequest();
-var url = "https://arsnova.eu/api/statistics";
+var drawn = false;
 
-
-xhr.onreadystatechange=function() {
-    if (xhr.readyState == 4 && xhr.status == 200) {
-        getdata(xhr.responseText);
+for(i = 0; i <=1; i++){
+    if(!drawn){
+        getStats();
+        drawn = true;
+    }
+    else{
+        setInterval(getStats, 30000);
     }
 }
-xhr.open("GET", url, true);
-xhr.timeout = 20000;
-xhr.send();
+
+
+function getStats() {
+
+    var xhr = new XMLHttpRequest();
+    var url = "https://arsnova.eu/api/statistics";
+
+    xhr.onreadystatechange=function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            drawStats(xhr.responseText);
+        }
+    }
+    xhr.open("GET", url, true);
+    xhr.timeout = 20000;
+    xhr.send();
+}
 
 
 
-function getdata(response) {
+function drawStats(response) {
     var data = JSON.parse(response);
     var answers = data.answers
     var lectureQuestions = data.lectureQuestions;
@@ -29,11 +44,27 @@ function getdata(response) {
     var sessions = data.sessions;
     var questions = data.questions;
 
+    var qaData = [
+        {
+            value: questions,
+            color: "#FF8909",
+            highlight: "#FF9B09",
+            label: "Fragen"
+        },
+        {
+            value: answers,
+            color:"#125DA6",
+            highlight: "#125DDD",
+            label: "Antworten"
+        }
+    ]
+
+
     var questionData = [
         {
             value: lectureQuestions,
-            color:"#FF9B09",
-            highlight: "#FF8909",
+            color:"#FF8909",
+            highlight: "#FF9B09",
             label: "Hörsaalfragen"
         },
         {
@@ -44,46 +75,57 @@ function getdata(response) {
         },
         {
             value: conceptQuestions,
-            color:"#FF5909",
-            highlight: "#FF5909",
+            color:"#FF8909",
+            highlight: "#FF9B09",
             label: "Konzeptfragen"
         },
         {
             value: interposedQuestions,
-            color: "#125DA6",
-            highlight: "#125DCC",
+            color: "#393939",
+            highlight: "#7e7e7e",
             label: "Zwischenfragen"
         }
     ]
 
-
-    var sessionData = [
-         {
-            value: sessions,
-            color:"#FF9B09",
-            highlight: "#FF8909",
-            label: "Sitzungen gesamt"
-        },
+     var sessionData = [
         {
             value: openSessions,
-            color: "#125DA6",
-            highlight: "#125DDD",
+            color: "#FF8909",
+            highlight: "#FF9B09",
             label: "offene Sitzungen"
         },
         {
             value: closedSessions,
-            color:"#FF5909",
-            highlight: "#FF5909",
+            color:"#125DA6",
+            highlight: "#125DDD",
             label: "geschlossene Sitzungen"
         }
     ]
 
-    var first = $("#questionChart").get(0).getContext("2d");
-    var questionChart = new Chart(first).Doughnut(questionData, {segmentStrokeWidth: 2});
+    var userData = [
+        {
+            value: activeStudents,
+            color: "#125DA6",
+            highlight: "#125DDD",
+            label: "Studenten"
+        },
+        {
+            value: creators,
+            color:"#FF8909",
+            highlight: "#FF9B09",
+            label: "Lehrende"
+        }
+    ]
 
-    var second = $("#sessionChart").get(0).getContext("2d");
-    var sessionChart = new Chart(second).PolarArea(sessionData);
+    var first = $("#questionChart1").get(0).getContext("2d");
+    var qaChart = new Chart(first).Doughnut(qaData);
+
+    var second = $("#questionChart2").get(0).getContext("2d");
+    var questionChart = new Chart(second).Pie(questionData);
+
+    var third = $("#userChart").get(0).getContext("2d");
+    var userChart = new Chart(third).Doughnut(userData);
+
+    var fourth = $("#sessionChart").get(0).getContext("2d");
+    var sessionChart = new Chart(fourth).Pie(sessionData);
 }
-
-
-
